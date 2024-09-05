@@ -24,20 +24,16 @@ export const ThemeContext = createContext();
 
 // ThemeProvider component
 export const ThemeProvider = ({ children }) => {
-  // State for the current theme and primary color
-  const [theme, setTheme] = useState(themes.dark); // Default to light theme
-  const [primaryColor, setPrimaryColor] = useState(primaryColors.blue); // Default to blue
+  const [primaryColor, setPrimaryColor] = useState(primaryColors.blue);
 
-  // Function to toggle between light and dark themes
   const toggleTheme = () => {
     setTheme((prevTheme) =>
       prevTheme === themes.light ? themes.dark : themes.light
     );
   };
 
-  // Function to change the primary color
   const changePrimaryColor = (color) => {
-    setPrimaryColor(primaryColors[color] || primaryColors.blue); // Default to blue if color not found
+    setPrimaryColor(primaryColors[color] || primaryColors.blue); 
   };
 
   return (

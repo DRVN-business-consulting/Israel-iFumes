@@ -69,7 +69,7 @@ const MusicList = ({
       {/* Primary Color Selector */}
       <TouchableOpacity
         onPress={() => setColorPickerVisible(true)}
-        style={[styles.themeButton, { backgroundColor: primaryColor }]} // Set the background color to primaryColor
+        style={[styles.themeButton, { backgroundColor: primaryColor }]}
       >
         <Text style={[styles.themeButtonText, { color: theme.background }]}>
           Theme
@@ -88,7 +88,7 @@ const MusicList = ({
               <TouchableOpacity
                 key={color}
                 onPress={() => handleColorSelect(color)}
-                style={[styles.colorButton, { backgroundColor: color }]} // Color button background
+                style={[styles.colorButton, { backgroundColor: color }]}
               />
             ))}
           </View>

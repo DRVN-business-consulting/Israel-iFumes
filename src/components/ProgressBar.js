@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useContext } from "react"; // Import useContext
+import React, { useEffect, useRef, useContext } from "react";
 import { View, StyleSheet, Animated, Text } from "react-native";
 import { ThemeContext } from "../context/ThemeContext";
 
 const ProgressBar = ({ progress, duration }) => {
   const animatedProgress = useRef(new Animated.Value(0)).current;
-  const { primaryColor, theme } = useContext(ThemeContext); // Access primaryColor and theme from ThemeContext
+  const { primaryColor, theme } = useContext(ThemeContext);
 
   useEffect(() => {
     Animated.timing(animatedProgress, {
@@ -34,7 +34,7 @@ const ProgressBar = ({ progress, duration }) => {
                 inputRange: [0, 100],
                 outputRange: ["0%", "100%"],
               }),
-              backgroundColor: primaryColor, // Use primaryColor for the progress bar fill
+              backgroundColor: primaryColor, 
             },
           ]}
         />
@@ -55,12 +55,12 @@ const styles = StyleSheet.create({
   container: {
     alignItems: "center",
     marginVertical: 20,
-    width: "100%", // Ensure it takes the full width
+    width: "100%", 
   },
   progressBarBackground: {
     width: "100%",
     height: 10,
-    backgroundColor: "#404040", // Darker background for better contrast
+    backgroundColor: "#404040", 
     borderRadius: 5,
     overflow: "hidden",
     marginBottom: 10,
