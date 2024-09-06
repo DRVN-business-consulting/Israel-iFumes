@@ -24,6 +24,7 @@ export const ThemeContext = createContext();
 
 // ThemeProvider component
 export const ThemeProvider = ({ children }) => {
+  const [theme, setTheme] = useState(themes.light);
   const [primaryColor, setPrimaryColor] = useState(primaryColors.blue);
 
   const toggleTheme = () => {
@@ -33,7 +34,7 @@ export const ThemeProvider = ({ children }) => {
   };
 
   const changePrimaryColor = (color) => {
-    setPrimaryColor(primaryColors[color] || primaryColors.blue); 
+    setPrimaryColor(primaryColors[color] || primaryColors.blue);
   };
 
   return (
